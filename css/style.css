@@ -1,0 +1,1033 @@
+/* Default styles for all devices */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    background-color: #F2F0EF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px; /* Fixed height */
+    padding: 0 1rem; /* Add padding for gap */
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Move to the left */
+    padding-right: 4rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    flex-direction: row; /* Ensure horizontal layout */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    color: #555;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #28a745; /* Change hover color to green */
+}
+
+.btn-outline-secondary {
+    color:  #F28C28;
+    background: none;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    border-radius: 8px; /* Rounded corners */
+    padding: 0.5rem 1rem; /* Add padding for rectangular shape */
+    border: none; /* Remove border */
+}
+
+.btn-outline-secondary:hover {
+    color: #fff; /* Change icon color to white */
+    background-color: green
+}
+
+.navbar-right .btn-outline-secondary i {
+    font-size: 1.5rem; /* Increase the icon size */
+}
+
+.btn {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    padding: 0.5rem 1rem; /* Padding */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.logo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+/* Ensure the search box is positioned properly */
+
+.search-bar-box {
+
+    position: absolute;
+
+    top: 50%; /* Center vertically */
+
+    left: 50%; /* Center horizontally */
+
+    transform: translate(-50%, -50%); /* Adjust position */
+
+    background: #fff;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    width: 300px; /* Adjust width */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    display: none; /* Hidden by default */
+
+    z-index: 1001; /* Ensure it appears above the banner */
+
+    border-radius: 4px;
+
+    overflow: hidden;
+
+}
+
+
+
+/* Display when active */
+
+.search-bar-box.active {
+
+    display: block;
+
+}
+
+
+
+/* Proper alignment of search bar inside box */
+
+.search-bar {
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    padding: 5px;
+
+    background: #fff;
+
+    border-radius: 4px;
+
+    gap: 8px; /* Space between input and button */
+
+}
+
+
+
+/* Adjust input field */
+
+.search-bar input[type="text"] {
+
+    flex: 1;
+
+    padding: 8px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+    font-size: 1rem;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+}
+
+
+
+/* Fix button alignment */
+
+.search-bar button {
+
+    background-color: #28a745;
+
+    color: white;
+
+    border: none;
+
+    padding: 8px 12px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+
+}
+
+
+
+.search-bar button:hover {
+
+    background-color: #218838;
+
+}
+
+.cart-card {
+    position: fixed;
+    top: 80px; /* Adjust to be below the navbar */
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 1rem;
+    border-radius: 8px; /* Rounded corners */
+}
+
+.cart-card.active {
+    right: 0;
+}
+
+.cart-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #28a745;
+}
+
+.cart-card .cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-card .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.cart-card .cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-card .cart-item-details {
+    flex-grow: 1;
+    margin-left: 1rem;
+}
+
+.cart-card .cart-item-details h4 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.cart-card .cart-item-details p {
+    font-size: 0.875rem;
+    color: #555;
+}
+
+.cart-card .cart-total {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.cart-card .btn-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.cart-card .btn-remove {
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #000; /* Black color for the trash can icon */
+}
+
+.cart-card .btn-remove:hover {
+    color: #ef1212; 
+}
+
+.cart-card .quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.cart-card .quantity-controls button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #28a745;
+    padding: 0 0.5rem;
+}
+
+.cart-card .quantity-controls .quantity {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+
+.cart-card .btn-checkout {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.cart-card .btn-checkout:hover {
+    background-color: #218838;
+}
+
+.login-form {
+    position: absolute;
+    top: 80px; /* Adjust as needed */
+    right: 0;
+    border-radius: .4rem;
+    width: 300px; /* Adjust as needed */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+    z-index: 1001; /* Ensure it appears above other elements */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.login-form.active {
+    display: block; /* Show when active */
+}
+
+.login-form .btn-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.login-form h1 {
+    margin-bottom: 1.5rem;
+    color: #28a745;
+}
+
+.login-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.login-form .form-control {
+    border-radius: .25rem;
+    padding: .5rem;
+    border: 1px solid #ccc;
+}
+
+.login-form .btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.login-form .btn:hover {
+    background-color: #218838;
+}  
+
+
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 1; /* Decrease z-index */
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 500px; /* Increase the maximum height */
+    object-fit: cover; /* Ensure the image covers the area */
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.banner-text .btn {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid white; /* Add border */
+    background-color: #F28C28; /* Change button color to orange */
+    color: white;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+}
+
+.banner-text .btn:hover {
+    color: #fff; /* Change text color to white */
+    background-color: #28a745; /* Change box color to green */
+    border-color: #28a745; /* Change border color to green */
+}
+
+.highlight {
+    color: #28a745; /* Change color to green */
+}
+
+.features-section {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 0 1rem; /* Add padding for gap */
+}
+
+.features-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid #28a745; /* Add border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff; /* Background color */
+    color: #28a745; /* Text color */
+}
+
+.feature-box {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
+    margin-bottom: 0.5rem; /* Further reduce margin for closer spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%; /* Ensure full width */
+    height: 90%; /* Ensure square shape */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.feature-box:hover {
+    transform: translateY(-10px); /* Move up on hover */
+    box-shadow: 0 8px 16px rgba(40, 167, 69, 0.5); /* Change box shadow color to green on hover */
+}
+
+.feature-box i {
+    font-size: 3rem;
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+.feature-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-box p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.col-md-4 {
+    flex: 0 0 30%; /* Ensure columns take up 30% of the row */
+    margin-bottom: 0.5rem; /* Further reduce margin for closer spacing */
+}
+
+/* Media Queries */
+@media (max-width: 1000px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-right {
+        padding-right: 0;
+    }
+    .banner-text {
+        font-size: 1.8rem; /* Adjust font size */
+    }
+    .features-section h2 {
+        font-size: 2rem; /* Adjust font size */
+    }
+    .feature-box {
+        width: 45%; /* Adjust width for smaller screens */
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+    .navbar-nav {
+        display: none; /* Hide navbar links */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar-nav.active {
+        display: flex; /* Show navbar links when active */
+    }
+    .navbar-right {
+        padding-right: 0;
+    }
+    .banner-text {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+    .features-section h2 {
+        font-size: 1.8rem; /* Adjust font size */
+    }
+    .feature-box {
+        width: 100%; /* Full width for smaller screens */
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-right {
+        padding-right: 0;
+    }
+    .banner-text {
+        font-size: 1.5rem;
+    }
+
+    
+    .banner-text .btn {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    .features-section {
+        padding: 2rem 0;
+    }
+    .features-section h2 {
+        font-size: 2rem;
+    }
+    .feature-box {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+    .navbar-nav {
+        display: none; /* Hide navbar links */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar-nav.active {
+        display: flex; /* Show navbar links when active */
+    }
+    .navbar-right {
+        padding-right: 0;
+    }
+    .banner-text {
+        font-size: 1.3rem;
+    }
+
+    .banner-text .h1 {
+        font-size: 1.25rem;
+    }
+    .banner-text .btn {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    .features-section {
+        padding: 1.5rem 0;
+    }
+    .features-section h2 {
+        font-size: 1.75rem;
+    }
+    .feature-box {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-right {
+        padding-right: 0;
+    }
+    .banner-text {
+        font-size: 1.3rem; /* Adjust font size */
+    }
+    .features-section h2 {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+    .feature-box {
+        width: 100%; /* Full width for smaller screens */
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-right {
+        padding-right: 0;
+    }
+    .banner-text {
+        font-size: 1.3rem;
+    }
+
+    .banner-text .h1 {
+        font-size: 1.25rem;
+    }
+    .banner-text .btn {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    .features-section {
+        padding: 1.5rem 0;
+    }
+    .features-section h2 {
+        font-size: 1.75rem;
+    }
+    .feature-box {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-right {
+        padding-right: 0;
+    }
+    .banner-text {
+        font-size: 1.2rem;
+    }
+
+    .banner-text .h1 {
+        font-size: 1rem;
+    }
+    .banner-text .btn {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    .features-section {
+        padding: 1rem 0;
+    }
+    .features-section h2 {
+        font-size: 1.5rem;
+    }
+    .feature-box {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.cart-card {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 1rem;
+    
+}
+
+.cart-card.active {
+    right: 0;
+}
+
+.cart-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.cart-card .cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-card .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.cart-card .cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-card .cart-item-details {
+    flex-grow: 1;
+    margin-left: 1rem;
+}
+
+.cart-card .cart-item-details h4 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.cart-card .cart-item-details p {
+    font-size: 0.875rem;
+    color: #555;
+}
+
+.cart-card .cart-total {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.cart-card .btn-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.cart-card .btn-remove {
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #000; /* Black color for the trash can icon */
+}
+
+.cart-card .btn-remove:hover {
+    color: #ef1212; 
+}
+
+.cart-card .quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.cart-card .quantity-controls button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #28a745;
+    padding: 0 0.5rem;
+}
+
+.cart-card .quantity-controls .quantity {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+
+.cart-card .btn-checkout {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.cart-card .btn-checkout:hover {
+    background-color: #218838;
+}
+
+.search-bar {
+    position: absolute;
+    padding-right: 100px ;
+    right: 20px;
+    width: 200px;
+    height: 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    margin-right: 2rem; /* Increase margin to the right */
+}
+
+.search-bar.active {
+    width: 200px;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem; /* Adjust padding */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Adjust transition */
+}
+
+.search-bar button:hover {
+    background-color: #218838;
+}
+
+.login-form {
+    position: absolute;
+    top: 85px; /* Adjust to be below the navbar */
+    right: 0;
+    width: 300px; /* Adjust as needed */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+    z-index: 1000000; /* Ensure it appears above other elements */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.login-form.active {
+    display: block; /* Show when active */
+}
+
+.login-form .btn-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.login-form h1 {
+    margin-bottom: 1.5rem;
+    color: #28a745;
+}
+
+.login-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.login-form .form-control {
+    border-radius: .25rem;
+    padding: .5rem;
+    border: 1px solid #ccc;
+}
+
+.login-form .btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.login-form .btn:hover {
+    background-color: #218838;
+}
+
+.btn {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    padding: 0.5rem 1rem; /* Padding */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.footer {
+    background-color: #F2F0EF;
+    padding: 2rem 0;
+    text-align: center;
+    color: #555;
+}
+
+.footer h4 {
+    font-size: 1.5rem;
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+.footer p, .footer ul, .footer li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer ul {
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #28a745;
+}
